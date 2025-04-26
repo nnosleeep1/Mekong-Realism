@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + React</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script
+    src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"></script>
+  <script>
+    new CozeWebSDK.WebChatClient({
+      config: {
+        bot_id: '7497636355217440769',
+      },
+      componentProps: {
+        title: 'Coze',
+      },
+      auth: {
+        type: 'token',
+        token: 'pat_5AZWIXqCS9vTmSQJRPRCJ5qyQIg74t5i1w0OvgRZ6FZbcv2nDijK109tpUvZYJXb',
+        onRefreshToken: function () {
+          return 'pat_5AZWIXqCS9vTmSQJRPRCJ5qyQIg74t5i1w0OvgRZ6FZbcv2nDijK109tpUvZYJXb'
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
